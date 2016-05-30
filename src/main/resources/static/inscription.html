@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Inscription Etudiant</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/myStyle.css" />
+</head>
+<body ng-app="myapp" ng-controller="InscriptionContoller">
+	<div class="col-md-6 col-sm-6 col-xs-12 spacer">
+		<div class="panel panel-info">
+			<div class=" panel-heading">Inscription Etudiant</div>
+			<div class="panel-body">
+			<div ng-if="mode.value=='form'">
+				<form>
+					<div class="form-group">
+						<label class="control-label">Nom</label> <input
+							class="form-control" type="text" ng-model="etudiant.nom" /> <span
+							ng-if="errors" class="alert-danger">{{errors.nom}}</span>
+					</div>
+					<div class="form-group">
+						<label class="control-label">Prenom</label> <input
+							class="form-control" type="text" ng-model="etudiant.prenom" /> <span
+							ng-if="errors" class="alert-danger">{{errors.prenom}}</span>
+					</div>
+					<div class="form-group">
+						<label class="control-label">Date Naissance</label> <input
+							class="form-control" type="date"
+							ng-model="etudiant.dateDeNaisance" /> <span ng-if="errors"
+							class="alert-danger">{{errors.dateDeNaisance}}</span>
+					</div>
+					<div>
+						<boutton class="btn btn-primary" ng-click="saveEtudiant()">Save</boutton>
+					</div>
+				</form>
+			</div>
+			
+			<div ng-if="mode.value=='confirm'">
+			<div class="panel-heading">L'eudiant a été inscrit avec succés</div>
+				<div class="form-group">
+						<label class="control-label">ID</label> 
+					<label class="control-label">{{etudiant.idEtudiant}}</label> 
+					</div>
+						<div class="form-group">
+						<label class="control-label">Nom</label> 
+					<label class="control-label">{{etudiant.nom}}</label> 
+					</div>
+						<div class="form-group">
+						<label class="control-label">prenom</label> 
+					<label class="control-label">{{etudiant.prenom}}</label> 
+					</div>
+					</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/myapp.js"></script>
+</body>
+</html>

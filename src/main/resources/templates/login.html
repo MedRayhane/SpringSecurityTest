@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Authentfication</title>
+<link rel="stylesheet" type="text/css"
+	href="../static/css/bootstrap.min.css"
+	th:href="@{css/bootstrap.min.css}" />
+</head>
+<body>
+	<div class="col-md-6 spacer">
+		<div class="panel panel-info">
+			<div class="panel-heading">Authentfication</div>
+			<div class="panel-body">
+				<form th:action="@{/login}" method="Post">
+					<div class="form-group">
+						<label class="control-label">Login</label> <input
+							class="form-control" type="text" name="username"
+							placeholder="Your user Name" />
+					</div>
+					<div class="form-group">
+						<label class="control-label">Password</label> <input
+							class="form-control" type="password" name="password"
+							placeholder="Your Password" />
+					</div>
+
+					<div>
+						<input class="btn btn-primary" type="submit" value="Login" />
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

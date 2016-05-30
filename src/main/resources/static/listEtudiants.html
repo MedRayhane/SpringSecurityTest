@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>list Etudiant</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/myStyle.css" />
+</head>
+<body ng-app="myapp" ng-controller="InscriptionContoller">
+	<div class="col-md-6 col-sm-6 spacer">
+		<table class="table table-striped">
+			<thead>
+
+				<tr>
+					<td>Id</td>
+					<td>Nom</td>
+					<td>Prenom</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="e in pageEtudiants.content">
+					<td>{{e.idEtudiant}}</td>
+					<td>{{e.nom}}</td>
+					<td>{{e.prenom}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/myapp.js"></script>
+</body>
+</html>
